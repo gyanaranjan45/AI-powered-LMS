@@ -7,7 +7,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 import { MdRemoveRedEye } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { getRedirectResult } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../utils/Firebase";
 import { toast } from "react-toastify";
 import { ClipLoader } from "react-spinners";
@@ -41,7 +41,7 @@ function Login() {
   };
   const googleLogin = async () => {
     try {
-      const response = await signInWithRedirect(auth, provider);
+      const response = await signInWithPopup(auth, provider);
 
       let user = response.user;
       let name = user.displayName;
