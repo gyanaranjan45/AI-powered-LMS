@@ -41,7 +41,7 @@ function Login() {
   };
   const googleLogin = async () => {
     try {
-      const response = await signInWithPopup(auth, provider);
+      const response = await signInWithRedirect(auth, provider);
 
       let user = response.user;
       let name = user.displayName;
