@@ -7,7 +7,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 import { MdRemoveRedEye } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { signInWithPopup } from "firebase/auth";
+import { getRedirectResult } from "firebase/auth";
 import { auth, provider } from "../../utils/Firebase";
 import { toast } from "react-toastify";
 import { ClipLoader } from "react-spinners";
